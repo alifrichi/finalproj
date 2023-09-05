@@ -1,0 +1,2 @@
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_zeagfuuz.json"  background="rgba(0, 0, 0, 0)"  speed="1"  "  loop  autoplay></lottie-player>
