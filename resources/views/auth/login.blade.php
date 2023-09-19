@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="text-center">
-       
+
         <p class="text-3xl">ยินดีต้อนรับนักอ่าน</p>
     </div>
     <!-- Session Status -->
@@ -53,13 +53,13 @@
 
         </div>
         <div class="flex items-center justify-center mt-4">
-            
+
             @if (Route::has('register'))
                 <a class="text-sm text-center text-gray-600 underline rounded-md dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('register') }}">
                     {{ __('ยังไม่มีบัญชี?') }}
                 </a>
             @endif
         </div>
-        
+
     </form>
 </x-guest-layout>

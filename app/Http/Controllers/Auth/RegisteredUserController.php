@@ -32,15 +32,20 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
+
+        // ใส่ dd() เพื่อดูข้อมูลที่ถูกส่งมา
+
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => 1,// กำหนด role เป็น 0 สำหรับผู้ใช้ที่ลงทะเบียน
         ]);
+
 
         event(new Registered($user));
 
